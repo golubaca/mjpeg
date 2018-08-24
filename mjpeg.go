@@ -16,7 +16,7 @@ type Reader struct {
 	Image    []byte
 	Headers  http.Header
 	Length   string
-	Height   int
+	Type     int
 }
 
 func check(e error) {
