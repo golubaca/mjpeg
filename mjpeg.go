@@ -45,7 +45,7 @@ func (mjpeg *Reader) New(streamURL string, auth ...map[string]string) (err error
 	mjpeg.Stream = *stream
 	reader := bufio.NewReader(stream.Body)
 	mjpeg.Reader = *reader
-	// Bondary can be found in headers so we split value to extract boundary
+	// Boundary can be found in headers so we split value to extract boundary
 	mjpeg.Headers = stream.Header
 	mjpeg.Boundary = mjpeg.GetBoundary()
 
